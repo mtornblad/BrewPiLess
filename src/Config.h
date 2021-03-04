@@ -365,8 +365,7 @@
 
 
 #if  BOARD == Sonoff
-// define this option to disable webserver.
-#define SONOFF true 
+#define PINNAMES "{0:\"D3\",1:\"D10\",2:\"D4\",3:\"D9\",4:\"D2\",5:\"D1\",12:\"D6\",13:\"D7\",14:\"D5\",15:\"D8\",16:\"D0\",17:\"A0\"}"
 
 #if SONOFF_USE_AM2301
 // free up pin 14, so that it can be assigned to AM2301
@@ -420,6 +419,8 @@
 */
 
 #elif BOARD == Thorrak_PCB
+#define PINNAMES "{0:\"D3\",1:\"D10\",2:\"D4\",3:\"D9\",4:\"D2\",5:\"D1\",12:\"D6\",13:\"D7\",14:\"D5\",15:\"D8\",16:\"D0\",17:\"A0\"}"
+
 #define oneWirePin NODEMCU_PIN_D6  // If oneWirePin is specified, beerSensorPin and fridgeSensorPin are ignored
 // actuators
 #define coolingPin NODEMCU_PIN_D5
@@ -431,6 +432,8 @@
 #define DownButtonPin NODEMCU_PIN_D4
 
 #elif BOARD == BrewShield
+#define PINNAMES "{0:\"D3\",1:\"D10\",2:\"D4\",3:\"D9\",4:\"D2\",5:\"D1\",12:\"D6\",13:\"D7\",14:\"D5\",15:\"D8\",16:\"D0\",17:\"A0\"}"
+
 // default
 #define oneWirePin NODEMCU_PIN_D6  // If oneWirePin is specified, beerSensorPin and fridgeSensorPin are ignored
 #define coolingPin NODEMCU_PIN_D5
@@ -447,6 +450,9 @@
 #define DownButtonPin NODEMCU_PIN_D4
 
 #elif BOARD == SWB2
+
+#define PINNAMES "{12:\"Plug 1\",14:\"Plug 2\",5:\"Plug 3\",0:\"Internal 00/Led\",15:\"USB\",1:\"Internal TX\",3:\"Internal RX\",13:\"D7\",14:\"D5\",15:\"D8\",16:\"D0\",17:\"A0\"}"
+
 
 #define oneWirePin NODEMCU_PIN_D10  // If oneWirePin is specified, beerSensorPin and fridgeSensorPin are ignored
 
