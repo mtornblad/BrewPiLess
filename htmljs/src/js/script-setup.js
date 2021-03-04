@@ -1,24 +1,8 @@
 var BackupFile = "/device.cfg";
 var devices = {
     pinlabel:function(pin){
-        var c = {
-            0: "D3",
-            1: "D10",
-            2: "D4",
-            3: "D9",
-            4: "D2",
-            5: "D1",
-            12: "D6",
-            13: "D7",
-            14: "D5",
-            15: "D8",
-            16: "D0",
-            17: "A0"
-        };
         if (pin < 0) return "NA";
-        if (window.board == "f")  return "GPIO " + pin;
-        if (window.board == "e") return c[pin];
-        return "Unknown";
+        return (window.pinNames[pin] ? window.pinNames[pin] : "GPIO" + pin )
     },
     pinFuncChange:function(g){
         if(g.querySelector("select.device-function").value ==8){
@@ -293,7 +277,7 @@ function init(classic) {
                 listGot()
             },
             N:function(a){
-                window.board= a.b;
+                window.pinNames= a.p;
             }
         }
     })

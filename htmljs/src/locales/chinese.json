@@ -1,4 +1,14 @@
 {
+    "chart_rh":"!TODO!",
+    "status_humidity":"!TODO!",
+    "label_humidity":"!TODO!",
+    "dht_temp_sensor":"!TODO!",
+    "setup_sensor_type":"!TODO!",
+    "dht_sensor_family":"!TODO!",
+    "setup_humidifier":"!TODO!",
+    "setup_dehumidifier":"!TODO!",
+    "log_brewersfriend_stream_apikey":"!TODO!",
+
     "page_lang": "zh-tw",
     "page_title": "BrewPiLess執行中!",
     "lcdline1": "Live LCD waiting",

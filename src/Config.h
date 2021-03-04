@@ -308,6 +308,7 @@
 #define BrewShield 0
 #define Sonoff 1
 #define Thorrak_PCB 2
+#define SWB2 3
 
 #ifndef BOARD
 #define BOARD BrewShield
@@ -444,6 +445,24 @@
 
 #define UpButtonPin NODEMCU_PIN_D3
 #define DownButtonPin NODEMCU_PIN_D4
+
+#elif BOARD == SWB2
+
+#define oneWirePin NODEMCU_PIN_D10  // If oneWirePin is specified, beerSensorPin and fridgeSensorPin are ignored
+
+// actuators
+#define coolingPin NODEMCU_PIN_D6
+#define heatingPin NODEMCU_PIN_D5
+#define doorPin    NODEMCU_PIN_D1
+#define BuzzPin NODEMCU_PIN_D8
+
+//#define UpButtonPin NODEMCU_PIN_D3
+//#define DownButtonPin NODEMCU_PIN_D4
+
+#undef PIN_SDA
+#undef PIN_SCL
+#define PIN_SDA NODEMCU_PIN_D9
+#define PIN_SCL NODEMCU_PIN_D10
 
 #else
 #error "unknown board"

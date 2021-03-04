@@ -325,11 +325,12 @@ void PiLink::receive(void){
 			print(VERSION_STRING);
 			print("\",\"n\":%d,\"c\":\"", BUILD_NUMBER);
 			print(BUILD_NAME);
-			print("\",\"s\":%d,\"y\":%d,\"b\":\"%c\",\"l\":\"%d\"}",
+			print("\",\"s\":%d,\"y\":%d,\"b\":\"%c\",\"l\":\"%d\",",
 				BREWPI_STATIC_CONFIG,
 				BREWPI_SIMULATE,
 				BREWPI_BOARD,
 				BREWPI_LOG_MESSAGES_VERSION);
+			print("\"p\":{1:\"R1\", 6:\"Door\"}}");
 #endif
 			printNewLine();
 			break;
