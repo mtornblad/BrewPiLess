@@ -451,7 +451,7 @@
 
 #elif BOARD == SWB2
 
-#define PINNAMES "{12:\"Plug 1\",14:\"Plug 2\",5:\"Plug 3\",0:\"Internal 00/Led\",15:\"USB\",1:\"Internal TX\",3:\"Internal RX\",13:\"D7\",14:\"D5\",15:\"D8\",16:\"D0\",17:\"A0\"}"
+#define PINNAMES "{12:\"Plug 1\",14:\"Plug 2\",5:\"Plug 3\",0:\"Int0/Led\",15:\"USB\",1:\"IntTX\",3:\"IntRX\",13:\"D7\",14:\"D5\",15:\"D8\",16:\"D0\",17:\"A0\"}"
 
 
 #define oneWirePin NODEMCU_PIN_D10  // If oneWirePin is specified, beerSensorPin and fridgeSensorPin are ignored
@@ -467,8 +467,10 @@
 
 #undef PIN_SDA
 #undef PIN_SCL
-#define PIN_SDA NODEMCU_PIN_D9
-#define PIN_SCL NODEMCU_PIN_D10
+//#define PIN_SDA NODEMCU_PIN_D9
+//#define PIN_SCL NODEMCU_PIN_D10
+#define PIN_SDA NODEMCU_PIN_D3
+#define PIN_SCL NODEMCU_PIN_D4
 
 #else
 #error "unknown board"

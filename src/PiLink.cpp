@@ -330,7 +330,9 @@ void PiLink::receive(void){
 				BREWPI_SIMULATE,
 				BREWPI_BOARD,
 				BREWPI_LOG_MESSAGES_VERSION);
-			print("\"p\":{1:\"R1\", 6:\"Door\"}}");
+			print("\"p\":");
+			print(PINNAMES);
+			print("}");
 #endif
 			printNewLine();
 			break;
